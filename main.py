@@ -1,9 +1,11 @@
 
+from Crawler import Crawler
+
 
 
 
 def crawler():
-    print("this is main crawler Function")
+    crawler = Crawler()
 
 
 def recommender():
@@ -12,7 +14,7 @@ def recommender():
 
 def main():
     print("this is main Function")
-
+    crawler()
 
 
 
