@@ -2,7 +2,7 @@
 
 
 
-# this is WebCrawler Project for university(qiau)
+# this  WebCrawler Project for my university(qiau)
 
 
 
