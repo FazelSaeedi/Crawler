@@ -2,12 +2,12 @@
 
 
 
-# this  WebCrawler Project for my university(qiau)
+# this  WebCrawler Project is for my university(https://www.qiau.ac.ir/en/)
 
 
 
 
-# this README + Documentation of this Project will complete soon 
+#  README && Documentation of this Project will complete soon 
 
 
 
