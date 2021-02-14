@@ -4,11 +4,14 @@ from browser import Browser
 
 
 
-def crawler(activeBrowser , activeCrawler):
+def crawler( searchEngine , searchContent , activeBrowser , activeCrawler ):
+
+
     crawler = Crawler()
-    browser = Browser()
+    browser = Browser(searchEngine, searchContent)
 
-
+    searchEnginUrl = searchEngine
+    content = searchContent
 
     browserSwich = True
     crawlerSwich = False
@@ -16,7 +19,8 @@ def crawler(activeBrowser , activeCrawler):
 
     if activeBrowser :
         if browserSwich:
-            pass
+            # ---  1
+            browser = Browser(searchEnginUrl, content)
 
 
 
@@ -46,12 +50,15 @@ def recommender():
 def main():
 
 
-    activeBrowser = False
+    searchEnginUrl = 'https://www.google.com/'
+    searchContent = 'mobile.ir'
+
+    activeBrowser = True
     activeCrawler = False
     activeRecommender = False
 
 
-    crawler(activeBrowser , activeCrawler)
+    crawler( searchEnginUrl , searchContent , activeBrowser , activeCrawler)
 
 
     if activeRecommender:
