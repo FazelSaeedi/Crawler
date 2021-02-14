@@ -10,3 +10,21 @@ class Browser:
         self.__searchEngin_Url = searchEngin_Url
         self.__searchContent = searchContent
         self.__browser = webdriver.Firefox()
+
+
+
+
+    def openSearchEngin(self):
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |     use Selenium.get                            |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+        browser = self.__browser
+        browser.get(self.__searchEngin_Url)
+        print("Get" + '  ->  ' + str(self.__searchEngin_Url))
