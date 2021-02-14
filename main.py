@@ -5,13 +5,14 @@ from file import File
 
 
 
-def crawler( searchEngine , searchContent , activeBrowser , activeCrawler ):
+def crawler( searchEngine , projectName , searchContent , activeBrowser , activeCrawler ):
 
     file = File()
     crawler = Crawler()
 
     searchEnginUrl = searchEngine
     content = searchContent
+    projectName = projectName
 
     browserSwich = True
     crawlerSwich = False
@@ -30,7 +31,11 @@ def crawler( searchEngine , searchContent , activeBrowser , activeCrawler ):
             # ---  3
             brandsLinkInfo = browser.getBrandsLink()
 
-            print(brandsLinkInfo)
+
+            # ---  4
+            file.sendLinkstoQueue(projectName, brandsLinkInfo)
+            crawlerSwich = True
+
 
     if not activeBrowser and  activeCrawler :
         crawlerSwich = True
@@ -60,13 +65,15 @@ def main():
 
     searchEnginUrl = 'https://www.google.com/'
     searchContent = 'mobile.ir'
+    projectName = 'mobile.ir_Crawler'
+
 
     activeBrowser = True
     activeCrawler = False
     activeRecommender = False
 
 
-    crawler( searchEnginUrl , searchContent , activeBrowser , activeCrawler)
+    crawler( searchEnginUrl , projectName , searchContent , activeBrowser , activeCrawler)
 
 
     if activeRecommender:
