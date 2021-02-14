@@ -27,6 +27,10 @@ def crawler( searchEngine , searchContent , activeBrowser , activeCrawler ):
             browser.search()
 
 
+            # ---  3
+            brandsLinkInfo = browser.getBrandsLink()
+
+            print(brandsLinkInfo)
 
     if not activeBrowser and  activeCrawler :
         crawlerSwich = True

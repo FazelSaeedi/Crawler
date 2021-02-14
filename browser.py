@@ -124,3 +124,67 @@ class Browser:
         print('Crawler Open ' + '  ->  ' + str(self.__searchContent))
 
         time.sleep(4)
+
+
+
+
+    def getBrandsLink(self):
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |    find table of brands link (HTML)             |
+        |    Parse each row of table                      |
+        |    push all links into array                    |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |   1- use  find_elements_by_css_selector         |
+        |             ->  table of brand(HTML)            |
+        |                                                 |
+        |                                                 |
+        |   2 - for each row(HTML) -> parse HTML          |
+        |          use element.get_attribute("href")      |
+        |          use element.get_attribute("title")     |
+        |          append to links array                  |
+        |                                                 |
+        |                                                 |
+        |   3 - if links array > 0                        |
+        |        return links array                       |
+        |                                                 |
+        ---------------------------------------------------
+        |                                                 |
+        |   :return  links array                          |
+        |                                                 |
+        ---------------------------------------------------
+
+        """
+
+
+        # ---  1
+        browser = self.__browser
+        links = []
+
+        elements = browser.find_elements_by_css_selector("div.homebrandscontent a")
+        time.sleep(5)
+
+
+
+
+
+        # ---  2
+        for element in elements:
+            link = element.get_attribute("href")
+            brandName = element.get_attribute("title")
+            if brandName:
+                links.append(brandName + ',' + link)
+
+
+        # ---  3
+        if not links:
+            print('Lisks -> empty')
+            return False
+        else:
+            print('Links ->  feched')
+            return links
