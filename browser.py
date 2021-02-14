@@ -14,6 +14,43 @@ class Browser:
 
 
 
+    def search(self):
+
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |  open search engine and                         |
+        |        find content and                         |
+        |        open content .                           |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |   1 - open  searchEngin_Url                     |
+        |                                                 |
+        |   2 - find  searchContent                       |
+        |                                                 |
+        |   3 - open  searchContent                       |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+        # ---  1
+        self.openSearchEngin()
+
+
+        # ---  2
+        self.findSearchContent()
+
+
+        # ---  3
+        self.openSearchContent()
+        print('Search Function Finish')
+
+
+
     def openSearchEngin(self):
         """
 
@@ -63,7 +100,7 @@ class Browser:
         # ---  2
         browser.find_element_by_class_name('gNO89b').click()
         print("Get" + '  ->  ' + str(self.__searchEngin_Url) + '  ->  ' + 'Search ' + '  ->  ' + str(self.__searchContent))
-       
+
 
 
 

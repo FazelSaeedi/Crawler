@@ -23,6 +23,10 @@ def crawler( searchEngine , searchContent , activeBrowser , activeCrawler ):
             browser = Browser(searchEnginUrl, content)
 
 
+            # ---  2
+            browser.search()
+
+
 
     if not activeBrowser and  activeCrawler :
         crawlerSwich = True
