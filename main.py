@@ -4,19 +4,58 @@ from browser import Browser
 
 
 
-def crawler():
+def crawler(activeBrowser , activeCrawler):
     crawler = Crawler()
     browser = Browser()
+
+
+
+    browserSwich = True
+    crawlerSwich = False
+
+
+    if activeBrowser :
+        if browserSwich:
+            pass
+
+
+
+    if not activeBrowser and  activeCrawler :
+        crawlerSwich = True
+
+
+
+
+    if activeCrawler:
+        if crawlerSwich :
+            #Crawler Run
+            pass
+        else:
+            pass
+
+
 
 
 def recommender():
     recommender = Recommender()
 
 
+
+
+
 def main():
-    print("this is main Function")
-    crawler()
-    recommender()
+
+
+    activeBrowser = False
+    activeCrawler = False
+    activeRecommender = False
+
+
+    crawler(activeBrowser , activeCrawler)
+
+
+    if activeRecommender:
+       recommender()
 
 
 
