@@ -63,3 +63,27 @@ class Browser:
         # ---  2
         browser.find_element_by_class_name('gNO89b').click()
         print("Get" + '  ->  ' + str(self.__searchEngin_Url) + '  ->  ' + 'Search ' + '  ->  ' + str(self.__searchContent))
+       
+
+
+
+    def openSearchContent(self):
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |   use find_element_by_xpath -> __searchContent  |
+        |       and click it                              |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+        browser = self.__browser
+        browser.find_element_by_xpath('//a[@href="https://www.'+self.__searchContent+'/"]').click()
+
+        print('Crawler Search ' + '  ->  ' + str(self.__searchContent))
+        print('Crawler Open ' + '  ->  ' + str(self.__searchContent))
+
+        time.sleep(4)
