@@ -1,11 +1,12 @@
 from Recommender import Recommender
 from Crawler import Crawler
-
+from browser import Browser
 
 
 
 def crawler():
     crawler = Crawler()
+    browser = Browser()
 
 
 def recommender():
