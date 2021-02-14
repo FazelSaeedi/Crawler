@@ -1,14 +1,14 @@
 from Recommender import Recommender
 from Crawler import Crawler
 from browser import Browser
+from file import File
 
 
 
 def crawler( searchEngine , searchContent , activeBrowser , activeCrawler ):
 
-
+    file = File()
     crawler = Crawler()
-    browser = Browser(searchEngine, searchContent)
 
     searchEnginUrl = searchEngine
     content = searchContent
