@@ -1,6 +1,7 @@
 import requests
 
 from bs4 import BeautifulSoup
+import re
 
 
 class Crawler:
@@ -159,3 +160,76 @@ class Crawler:
 
         # --- 1
         return butifyResponse.select('div.phonesgrid div')
+
+
+
+
+    def getProductsInfo(self , productsOfPage):
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |    get a beautiful code of div of all product   |
+        |                separate rate name and href      |
+        |                         and return              |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      1 - for each product :                     |
+        |                                                 |
+        |          1.2 - get product rate                 |
+        |                                                 |
+        |          1.3 - get product name                 |
+        |                                                 |
+        |          1.4 - get product hrep                 |
+        |                                                 |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     return 3 array of informations of product   |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+
+        products_rate  = []
+        products_names = []
+        products_href  = []
+
+
+        # get each product info
+        # --- 1
+        pre = ''
+        for product in productsOfPage:
+
+
+            product_rate = self.getProductRate(product)
+            product_name = self.getProductName(product)
+            #product_detail_link = product.select('div span')[1]['data-tipurl']
+
+
+
+            # --- 1.2
+            for r in product_rate:
+                title = r['title']
+                rate = re.findall(r'[0-9]+', title)
+                #print(rate)
+                final_rate = (int(rate[0]) * int(rate[2]))/100
+                final_rate = round(final_rate)
+                products_rate.append(final_rate)
+
+
+            # --- 1.3
+            # --- 1.4
+            for i in product_name:
+                name = i.text
+                if (name != pre):
+                    pre = name
+                    products_names.append(name)
+                    products_href.append('https://www.mobile.ir' + i['href'])
+
+
+
+        return products_rate , products_names , products_href
