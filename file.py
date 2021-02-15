@@ -120,6 +120,33 @@ class File():
 
 
 
+        
+        def createFolder(self, directoryName):
+
+
+            """
+
+            |--------------------------------------------------
+            |                                                 |
+            |   create ordinary folder                        |
+            |                                                 |
+            |--------------------------------------------------
+            |                                                 |
+            |   1 - check if folder not exist make folder     |
+            |                                                 |
+            ---------------------------------------------------
+            |                                                 |
+            |   parameter : name of directory                 |
+            |                                                 |
+            |--------------------------------------------------
+
+            """
+
+            if not os.path.exists(directoryName):
+                os.makedirs(directoryName)
+
+
+
 
         def createCrawledFile(self , directory):
 
