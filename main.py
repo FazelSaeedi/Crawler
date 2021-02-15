@@ -7,6 +7,43 @@ from file import File
 
 def crawler( searchEngine , projectName , searchContent , activeBrowser , activeCrawler ):
 
+
+    """
+
+    |--------------------------------------------------
+    |                                                 |
+    |     Crawler Function                            |
+    |                                                 |
+    |--------------------------------------------------
+    |                                                 |
+    |   1 - initial Browser                           |
+    |                                                 |
+    |                                                 |
+    |   2 - Search into browser                       |
+    |                                                 |
+    |                                                 |
+    |   3 - get brands link                           |
+    |                                                 |
+    |                                                 |
+    |   4 - write links into Queue                    |
+    |                                                 |
+    |                                                 |
+    |   5 - Run Crawler                               |
+    |                                                 |
+    |                                                 |
+    ---------------------------------------------------
+    |                                                 |
+    |  :param  searchEngine:  e.g : GooGle            |
+    |                                                 |
+    |  :param  projectName:   e.g : mobile.ir_Crawler |
+    |                                                 |
+    |  :param  searchContent: e.g : mobile.ir         |
+    |                                                 |
+    ---------------------------------------------------
+
+    """
+
+
     file = File()
     crawler = Crawler()
 
