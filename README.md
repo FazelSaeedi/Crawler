@@ -54,7 +54,8 @@
           
 
 
-6 - now you can Run Project comfortably
+6 - now you can Run Main.py comfortably
+           
 
        
 -------------------------------------------------------------------------------------
