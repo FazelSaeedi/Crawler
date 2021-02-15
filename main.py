@@ -45,10 +45,10 @@ def crawler( searchEngine , projectName , searchContent , activeBrowser , active
 
     if activeCrawler:
         if crawlerSwich :
-            #Crawler Run
-            pass
+            # ---  5
+            crawler.run(projectName)
         else:
-            pass
+            print("there is no " + projectName  + " file for crawl")
 
 
 

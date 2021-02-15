@@ -15,6 +15,144 @@ class Crawler:
 
 
 
+    def run(self, projectName):
+
+        """
+
+        |-------------------------------------------------------------
+        |                                                             |
+        |                                                             |
+        |    create Crawled.txt for Processed links                   |
+        |    read brands(links) from queue                            |
+        |       for each brand(link) :                                |
+        |            get pages of brand for crawl                     |
+        |               for each page :                               |
+        |                  get productsInfo and                       |
+        |                     merge info                              |
+        |                                                             |
+        |                                                             |
+        |       sort array of products and                            |
+        |          create a file for store data and                   |
+        |             write into it                                   |
+        |       remove brand(link) from queue.txt                     |
+        |       add brand(link) into crawled.txt                      |
+        |                                                             |
+        |                                                             |
+        |--------------------------------------------------------------
+        |                                                             |
+        |                                                             |
+        |     1 -  create crawled.txt and read queue.txt              |
+        |                                                             |
+        |     2 -  for each brand(links):                             |
+        |                                                             |
+        |          2.1 - Modify the data for more readability         |
+        |                                                             |
+        |          2.2 - Get the number of product pages              |
+        |                                                             |
+        |          2.3 - New Brand object and array for store         |
+        |                          all data of each brand             |
+        |                                                             |
+        |                                                             |
+        |          2.4 - create array for store                       |
+        |                         all data of each brand              |
+        |                                                             |
+        |                                                             |
+        |          2.5 - for each page :                              |
+        |                                                             |
+        |                                                             |
+        |                2.5.1 - create page url ,                    |
+        |                        send request to it ,                 |
+        |                        beautify HTML code                   |
+        |                                                             |
+        |                                                             |
+        |                2.5.2 - parse HTML code and                  |
+        |                              get Product Info               |
+        |                                                             |
+        |                                                             |
+        |                2.5.3 - integrate parsed data                |
+        |                                                             |
+        |                End  for                                     |
+        |                                                             |
+        |                                                             |
+        |          2.6 - sort final Array ORDER BY DESC and           |
+        |                     create txt file for                     |
+        |                                                             |
+        |                                                             |
+        |          2.7 - store array into it's file and               |
+        |                            remove brand(link) from queue    |
+        |                                                             |
+        |                                                             |
+        |          2.8 - add brand(link) into crawled.txt             |
+        |                                                             |
+        |                                                             |
+        |          End  for                                           |
+        |                                                             |
+        |                                                             |
+        |                                                             |
+        |--------------------------------------------------------------
+        |                                                             |
+        |   :param  projectName                                       |
+        |                                                             |
+        --------------------------------------------------------------
+
+        """
+
+        # ---  1
+        self.file.createCrawledFile(projectName)
+        Links = self.file.read_file(projectName + '/queue.txt')
+
+        # ---  2
+        for link in Links:
+
+            # ---  2.1
+            brandName, LinkUrl = link.split(',')
+            LinkUrl = LinkUrl.replace('\n', '')
+
+            # ---  2.2
+            pageNumber = self.getPageNumber(LinkUrl)
+
+            # ---  2.3
+            brand = Brand(brandName, LinkUrl, pageNumber)
+
+            # ---  2.4
+            # array for store all data of eacch brand
+            arrayOfproducts = []
+
+            # --- 2.5
+            for page in range(1, int(pageNumber) + 1):
+
+                # --- 2.5.1
+                url = brand.getLink() + '?page=' + str(page)
+                response = self.request(url)
+                beautifyResponse = self.beautifyHTML(response.text)
+
+                # --- 2.5.2
+                profuctInfo = self.getProductsInfo(self.getPageProducts(beautifyResponse))
+                products_rate = profuctInfo[0]
+                products_names = profuctInfo[1]
+                products_href = profuctInfo[2]
+
+                # --- 2.5.3
+                for index, item in enumerate(products_names):
+                    integeretedData = [products_names[index], products_rate[index], products_href[index]]
+                    arrayOfproducts.append(integeretedData)
+
+            # --- 2.6
+            print(arrayOfproducts)
+            sortedArray = self.sortListByIndex(arrayOfproducts, 1, True)
+            self.file.createFolder(projectName + '/products')
+
+            # --- 2.7
+            self.file.addListToFile(projectName + "/products/" + str(brand.getName()) + ".txt", sortedArray)
+            self.file.removeLineFromFile(projectName + "/queue.txt", link)
+            print(link)
+
+            # --- 2.8
+            self.file.addLineToFile(projectName + "/crawled.txt", link)
+
+
+
+
     def getPageNumber(self, brandUrl):
 
 
