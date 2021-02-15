@@ -12,6 +12,34 @@ class File():
 
 
 
+        def read_file(self, address):
+
+
+            """
+
+            |--------------------------------------------------
+            |                                                 |
+            |   Read a txt file and return a array            |
+            |                                                 |
+            |--------------------------------------------------
+            |                                                 |
+            |    1 - read txt file line by line               |
+            |                                                 |
+            |-------------------------------------------------|
+            |                                                 |
+            |   return array                                  |
+            |                                                 |
+            ---------------------------------------------------
+
+            """
+
+            file1 = open(address, 'r')
+            Lines = file1.readlines()
+            return Lines
+
+
+
+
         def createProjectDir(self, directoryName):
 
 
