@@ -2,6 +2,7 @@ import requests
 
 from bs4 import BeautifulSoup
 import re
+import operator
 
 
 class Crawler:
@@ -134,6 +135,41 @@ class Crawler:
 
         # --- 1
         return requests.get(url)
+
+
+
+
+    def sortListByIndex(self , list , index , reverse = True):
+
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |      get a list and a index of list             |
+        |                   then sort it                  |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      1 - sort list by index                     |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      :param  List(array)                        |
+        |                                                 |
+        |      :param  index of list(array)               |
+        |                                                 |
+        |      :param  reverse  ? true   :  false         |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     return a sorted list                        |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+        return sorted(list, key = operator.itemgetter(index), reverse = reverse)
 
 
 
