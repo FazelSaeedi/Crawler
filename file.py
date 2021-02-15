@@ -93,6 +93,40 @@ class File():
 
 
 
+        def createCrawledFile(self , directory):
+
+            """
+
+            |--------------------------------------------------
+            |                                                 |
+            |   Create crawled.txt to directory of project    |
+            |                                                 |
+            |--------------------------------------------------
+            |                                                 |
+            |   1 - if exist crawled.txt into directory       |
+            |                remove it                        |
+            |                                                 |
+            |                                                 |
+            |   2 - create new crawled.txt into directory     |
+            |                                                 |
+            |                                                 |
+            ---------------------------------------------------
+
+            """
+            if self.isExistDirectory(directory):
+                # ---  1
+                if os.path.exists(directory+'/crawled.txt'):
+                    os.remove(directory+'/crawled.txt')
+                else:
+                    # ---  2
+                    open(directory + '/crawled.txt', "w+")
+            else:
+                print("there is no " + directory + " file for crawl")
+                exit()
+
+
+
+
         def isExistDirectory(self, directory):
 
             """
