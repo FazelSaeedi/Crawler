@@ -133,3 +133,29 @@ class Crawler:
 
         # --- 1
         return requests.get(url)
+
+
+
+
+    def getPageProducts(self , butifyResponse):
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |      get div of phons and parse                 |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      1 - sort list by index                     |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     return a parsed html code                   |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+        # --- 1
+        return butifyResponse.select('div.phonesgrid div')
