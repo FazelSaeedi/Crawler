@@ -121,6 +121,44 @@ class File():
 
 
 
+        def removeLineFromFile(self, directory, line):
+
+            """
+
+            |--------------------------------------------------
+            |                                                 |
+            |                                                 |
+            |    search a strign into txt file line by line   |
+            |                     and remove it               |
+            |                                                 |
+            |                                                 |
+            |--------------------------------------------------
+            |                                                 |
+            |    1 - opne file line by line                   |
+            |              and remove intended line           |
+            |                                                 |
+            |-------------------------------------------------|
+            |                                                 |
+            |   parameter : address of directory              |
+            |                                                 |
+            |   parameter : string                            |
+            |                                                 |
+            ---------------------------------------------------
+
+            """
+
+            # --- 1
+            with open(directory, "r+") as f:
+                d = f.readlines()
+                f.seek(0)
+                for i in d:
+                    if i != line:
+                        f.write(i)
+                f.truncate()
+
+
+
+
         def addLineToFile(self , directory , line):
 
             """
