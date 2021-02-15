@@ -1,9 +1,13 @@
+import requests
+
+from bs4 import BeautifulSoup
 
 
 class Crawler:
 
     def __init__(self):
         print("this is initial function of Crawler Class")
+
 
 
 
@@ -61,3 +65,71 @@ class Crawler:
             pageNumber = 1
 
         return pageNumber
+
+
+
+
+    def beautifyHTML(self, response):
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |      use BeautifulSoup library                  |
+        |           receive a HTML dirty code             |
+        |           beatify dirty HTML code               |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      1 - BeautifulSoup()  => get 2 parameter    |
+        |               1 - dirty HTML code               |
+        |               2 - type of parse e.g :           |
+        |                     html.parser                 |
+        |                     xml.parser                  |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     :param  response => ( HTML code )           |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     return beatify of dirty HTML code           |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+        # --- 1
+        return BeautifulSoup(response, 'html.parser')
+
+
+
+
+    def request(self, url):
+
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |      use requests library                       |
+        |      send request to :url                       |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      1 - get(url) => send request to url        |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     :param  URL of a web page                   |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     return HTML of Web page                     |
+        |                                                 |
+        |--------------------------------------------------
+
+        """
+
+        # --- 1
+        return requests.get(url)
