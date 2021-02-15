@@ -1,14 +1,16 @@
 import requests
-
+from file import File
 from bs4 import BeautifulSoup
 import re
 import operator
+from Brand import Brand
+
 
 
 class Crawler:
 
     def __init__(self):
-        print("this is initial function of Crawler Class")
+        self.file = File()
 
 
 
@@ -269,3 +271,59 @@ class Crawler:
 
 
         return products_rate , products_names , products_href
+
+
+
+
+    def getProductName(self , product):
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |      from div of each product separate          |
+        |                                  a tag          |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      1 - user BeautifulSoup.select for          |
+        |           select one element by id or class     |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     return a tag element                        |
+        |                                                 |
+        |--------------------------------------------------
+
+
+        """
+
+        return product.select('div.info h4 a')
+
+
+
+
+    def getProductRate(self , product):
+
+        """
+
+        |--------------------------------------------------
+        |                                                 |
+        |      from div of each product separate          |
+        |                                div tag          |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |      1 - user BeautifulSoup.select for          |
+        |           select one element by id or class     |
+        |                                                 |
+        |--------------------------------------------------
+        |                                                 |
+        |     return a div tag element                    |
+        |                                                 |
+        |--------------------------------------------------
+
+
+        """
+
+        return product.select('div.ratestars')
