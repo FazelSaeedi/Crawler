@@ -120,7 +120,73 @@ class File():
 
 
 
-        
+
+        def addLineToFile(self , directory , line):
+
+            """
+
+            |--------------------------------------------------
+            |                                                 |
+            |    take a string and write to txt.file          |
+            |                                                 |
+            |--------------------------------------------------
+            |                                                 |
+            |    1 - open txt file and write a string         |
+            |                                                 |
+            |-------------------------------------------------|
+            |                                                 |
+            |   parameter : address of directory              |
+            |                                                 |
+            |   parameter : string                            |
+            |                                                 |
+            ---------------------------------------------------
+
+            """
+            with open(directory, 'a') as f:
+                f.write(line)
+
+
+
+
+        def addListToFile(self , directory , list):
+
+            """
+
+            |--------------------------------------------------
+            |                                                 |
+            |   make dir and write a list into txt file       |
+            |              line by line                       |
+            |                                                 |
+            |--------------------------------------------------
+            |                                                 |
+            |    1 - if directory not exist create it         |
+            |                                                 |
+            |    2 - write each item of array(list)           |
+            |                     line by line                |
+            |                                                 |
+            |-------------------------------------------------|
+            |                                                 |
+            |   parameter : address of directory              |
+            |                                                 |
+            |   parameter : array                             |
+            |                                                 |
+            ---------------------------------------------------
+
+            """
+
+            # --- 1
+            if os.path.exists(directory):
+                os.remove(directory)
+
+
+            # --- 2
+            with open(directory, 'w') as f:
+                for items in list:
+                    f.write("%s\n" % items)
+
+
+
+
         def createFolder(self, directoryName):
 
 
