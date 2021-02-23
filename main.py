@@ -35,7 +35,7 @@ def crawler( searchEngine , projectName , searchContent , activeBrowser , active
     |                                                 |
     |  :param  searchEngine:  e.g : GooGle            |
     |                                                 |
-    |  :param  projectName:   e.g : mobile.ir_Crawler |
+    |  :param  projectName:   e.g : mobile.ir_Crawler_Sample |
     |                                                 |
     |  :param  searchContent: e.g : mobile.ir         |
     |                                                 |
@@ -103,11 +103,11 @@ def main():
 
     searchEnginUrl = 'https://www.google.com/'
     searchContent = 'mobile.ir'
-    projectName = 'mobile.ir_Crawler'
+    projectName = 'mobile.ir_Crawler_Sample'
 
 
-    activeBrowser = False
-    activeCrawler = False
+    activeBrowser = True
+    activeCrawler = True
     activeRecommender = True
 
 
