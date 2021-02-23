@@ -1,0 +1,8 @@
+['Fire Phone', 186, 'https://www.mobile.ir/phones/specifications-37481-amazon-fire-phone.aspx']
+['Kindle Fire HDX 8.9', 71, 'https://www.mobile.ir/tablets/specifications-37272-amazon-kindle-fire-hdx-8.9.aspx']
+['Kindle Fire HD 8.9 4G LTE', 63, 'https://www.mobile.ir/tablets/specifications-36908-amazon-kindle-fire-hd-8.9-4g-lte.aspx']
+['Kindle Fire HD 8.9', 54, 'https://www.mobile.ir/tablets/specifications-36909-amazon-kindle-fire-hd-8.9.aspx']
+['Kindle Fire HD', 54, 'https://www.mobile.ir/tablets/specifications-36910-amazon-kindle-fire-hd.aspx']
+['Kindle Fire', 40, 'https://www.mobile.ir/tablets/specifications-36912-amazon-kindle-fire.aspx']
+['Kindle Fire HDX', 30, 'https://www.mobile.ir/tablets/specifications-37273-amazon-kindle-fire-hdx.aspx']
+['Kindle Fire 2', 27, 'https://www.mobile.ir/tablets/specifications-36911-amazon-kindle-fire-2.aspx']

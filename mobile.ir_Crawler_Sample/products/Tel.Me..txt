@@ -1,0 +1,7 @@
+['T919', 5, 'https://www.mobile.ir/phones/specifications-35083-tel.me.-t919.aspx']
+['T939', 4, 'https://www.mobile.ir/phones/specifications-35080-tel.me.-t939.aspx']
+['T919i', 4, 'https://www.mobile.ir/phones/specifications-35082-tel.me.-t919i.aspx']
+['T918', 3, 'https://www.mobile.ir/phones/specifications-35081-tel.me.-t918.aspx']
+['T910', 3, 'https://www.mobile.ir/phones/specifications-35084-tel.me.-t910.aspx']
+['T909c', 2, 'https://www.mobile.ir/phones/specifications-35085-tel.me.-t909c.aspx']
+['T909', 2, 'https://www.mobile.ir/phones/specifications-35086-tel.me.-t909.aspx']

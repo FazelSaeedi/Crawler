@@ -1,0 +1,3 @@
+['Stylistic M532', 123, 'https://www.mobile.ir/tablets/specifications-37069-fujitsu-siemens-stylistic-m532.aspx']
+['T830', 9, 'https://www.mobile.ir/phones/specifications-33285-fujitsu-siemens-t830.aspx']
+['T810', 5, 'https://www.mobile.ir/phones/specifications-33286-fujitsu-siemens-t810.aspx']

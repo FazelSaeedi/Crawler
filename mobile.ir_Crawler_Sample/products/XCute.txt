@@ -1,0 +1,4 @@
+['DV2', 13, 'https://www.mobile.ir/phones/specifications-35179-xcute-dv2.aspx']
+['DV1', 13, 'https://www.mobile.ir/phones/specifications-35180-xcute-dv1.aspx']
+['DV80', 8, 'https://www.mobile.ir/phones/specifications-35177-xcute-dv80.aspx']
+['DV50', 6, 'https://www.mobile.ir/phones/specifications-35178-xcute-dv50.aspx']

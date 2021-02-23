@@ -1,0 +1,4 @@
+['700s', 282, 'https://www.mobile.ir/tablets/specifications-37072-dimo-700s.aspx']
+['900+', 179, 'https://www.mobile.ir/tablets/specifications-37070-dimo-900.aspx']
+['700', 133, 'https://www.mobile.ir/tablets/specifications-37073-dimo-700.aspx']
+['900', 95, 'https://www.mobile.ir/tablets/specifications-37071-dimo-900.aspx']

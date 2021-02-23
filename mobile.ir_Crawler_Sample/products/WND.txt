@@ -1,0 +1,5 @@
+['Wind Van Gogh 2100', 4, 'https://www.mobile.ir/phones/specifications-35172-wnd-wind-van-gogh-2100.aspx']
+['Wind DUO 2200', 4, 'https://www.mobile.ir/phones/specifications-35174-wnd-wind-duo-2200.aspx']
+['Wind DUO 2300', 3, 'https://www.mobile.ir/phones/specifications-35173-wnd-wind-duo-2300.aspx']
+['Wind DUO 2100', 2, 'https://www.mobile.ir/phones/specifications-35175-wnd-wind-duo-2100.aspx']
+['Wind DUO 2000', 2, 'https://www.mobile.ir/phones/specifications-35176-wnd-wind-duo-2000.aspx']

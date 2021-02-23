@@ -1,0 +1,6 @@
+['TG 200', 5, 'https://www.mobile.ir/phones/specifications-33429-kyocera-tg-200.aspx']
+['Solo E4000', 3, 'https://www.mobile.ir/phones/specifications-36116-kyocera-solo-e4000.aspx']
+['E2500', 2, 'https://www.mobile.ir/phones/specifications-36118-kyocera-e2500.aspx']
+['E4600', 0, 'https://www.mobile.ir/phones/specifications-36115-kyocera-e4600.aspx']
+['S1600', 0, 'https://www.mobile.ir/phones/specifications-36119-kyocera-s1600.aspx']
+['E3500', 0, 'https://www.mobile.ir/phones/specifications-36117-kyocera-e3500.aspx']
