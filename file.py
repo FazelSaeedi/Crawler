@@ -1,3 +1,4 @@
+import glob
 import os
 
 
@@ -309,3 +310,28 @@ class File():
             return False
 
 
+
+        def getFileNameInDir(self , directory , file_extension ):
+
+
+            """
+
+            |--------------------------------------------------
+            |                                                 |
+            |   1- return all demand file in folder           |
+            |                                                 |
+            |--------------------------------------------------
+            |                                                 |
+            |   parameter : name of directory                 |
+            |                                                 |
+            |   parameter : extension of file                 |
+            |                                                 |
+            |--------------------------------------------------
+
+            """
+
+            pathDirectorys = []
+            for file in glob.glob(directory+'/'+"*."+ file_extension):
+                pathDirectorys.append(file.replace(directory+'\\' , ''))
+
+            return pathDirectorys
