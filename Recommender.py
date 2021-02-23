@@ -3,8 +3,10 @@ import operator
 
 class Recommender():
 
-    def __init__(self):
-        print("this is initial function of Recommender Class")
+    def __init__(self , projectName):
+        self.__projectName = projectName
+        self.__recommenderDirectory = self.__projectName+'/recommenders'
+        self.__productDirectory = self.__projectName+'/products'
 
 
     def sortListByIndex(self , list , index , reverse = True):
