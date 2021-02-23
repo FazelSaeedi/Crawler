@@ -90,8 +90,9 @@ def crawler( searchEngine , projectName , searchContent , activeBrowser , active
 
 
 
-def recommender():
-    recommender = Recommender()
+def recommender(projectName):
+    recommender = Recommender(projectName)
+    recommender.run()
 
 
 
@@ -105,16 +106,16 @@ def main():
     projectName = 'mobile.ir_Crawler'
 
 
-    activeBrowser = True
+    activeBrowser = False
     activeCrawler = False
-    activeRecommender = False
+    activeRecommender = True
 
 
     crawler( searchEnginUrl , projectName , searchContent , activeBrowser , activeCrawler)
 
 
     if activeRecommender:
-       recommender()
+       recommender(projectName)
 
 
 
